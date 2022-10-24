@@ -58,7 +58,7 @@ module.exports = function(api) {
         {
           loose: true
         }
-      ],
+      ].filter(Boolean),
       [
         '@babel/plugin-proposal-private-property-in-object',
         {
