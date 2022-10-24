@@ -17,14 +17,14 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN rm -rf /var/lib/apt/lists/*
 
 # ディレクトリ・ファイルの作成
-RUN mkdir /d&dshare
-WORKDIR /d&dshare
-COPY Gemfile /d&dshare/Gemfile
-COPY Gemfile.lock /d&dshare/Gemfile.lock
+RUN mkdir /ddshare
+WORKDIR /ddshare
+COPY Gemfile /ddshare/Gemfile
+COPY Gemfile.lock /ddshare/Gemfile.lock
 
 # gem(Rails6)のインストール
 RUN bundle install
-COPY . /d&dshare
+COPY . /ddshare
 
 RUN yarn install --check-files
 RUN bundle exec rails webpacker:compile
