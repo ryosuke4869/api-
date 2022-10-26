@@ -44,6 +44,7 @@ group :development do
   gem 'spring'
   gem 'devise'#ログイン
   gem 'devise-i18n' #devise国際化
+  gem 'ransack' #ソート、検索
 end
 
 group :test do
