@@ -8,7 +8,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
       <v-spacer/>
-      <v-btn class="ma-2">
+      <v-btn to="/index" class="ma-2">
         新規登録
       </v-btn>
       <v-btn class="ma-2">
@@ -27,7 +27,6 @@
         nav
         dense
       >
-
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
@@ -44,11 +43,12 @@
     </v-navigation-drawer>
   </v-card>
 </template>
+
 <script>
 export default {
   data: () => ({
     drawer: false,
     group: null,
-  }),
+  })
 }
 </script>
